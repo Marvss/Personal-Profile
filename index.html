@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Ola | Tech Lead 8-Bit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Press Start 2P', cursive; background-color: #000; color: #fff; line-height: 1.6; }
+        .pixel-border { border: 4px solid #fff; box-shadow: 6px 6px 0px #555; margin-bottom: 20px; }
+        .skill-tag { background: #333; padding: 5px; display: inline-block; margin: 2px; font-size: 8px; border: 1px solid #fff; }
+        .section-title { color: #00ff00; text-transform: uppercase; margin-bottom: 15px; font-size: 14px; }
+        .exp-card { border-left: 4px solid #ffff00; padding-left: 15px; margin-bottom: 20px; }
+        .lang-btn { cursor: pointer; transition: all 0.2s; }
+        .lang-btn:active { transform: translateY(4px); box-shadow: 2px 2px 0px #555; }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+    <main class="max-w-4xl mx-auto">
+        
+        <div class="flex justify-end mb-6">
+            <button onclick="changeLanguage('es')" class="lang-btn pixel-border px-3 py-1 bg-red-600 text-[10px] mr-2">ES</button>
+            <button onclick="changeLanguage('en')" class="lang-btn pixel-border px-3 py-1 bg-blue-600 text-[10px]">EN</button>
+        </div>
+
+        <header class="text-center mb-12">
+            <div class="w-24 h-24 bg-blue-600 mx-auto mb-6 pixel-border flex items-center justify-center text-4xl">M</div>
+            <h1 class="text-xl md:text-3xl text-yellow-400 mb-2">MARVIN OLA</h1>
+            <p class="text-[10px] md:text-[12px] text-gray-400" data-key="title">TECH LEAD / SOFTWARE DEVELOPER</p>
+            <div class="mt-4 text-[8px] flex justify-center gap-4 text-green-400">
+                <span>LVL: 21</span>
+                <span>HP: 100/100</span>
+                <span>MP: ∞</span>
+            </div>
+        </header>
+
+        <section class="pixel-border p-6 bg-gray-900">
+            <h2 class="section-title" data-key="profile_title">> QUEST LOG: PERFIL </h2>
+            <p class="text-[10px] md:text-[11px] leading-relaxed" data-key="profile_desc">
+                "I believe the best technology is built by people who understand people." [cite: 14] 
+                Mi viaje comenzó en servicio al cliente y hospitalidad[cite: 15]. 
+                Hoy diseño arquitecturas robustas y estrategias técnicas[cite: 59].
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section class="pixel-border p-6 bg-blue-900/20">
+                <h2 class="section-title" data-key="exp_title">> CAMPAIGN MODE (EXPERIENCIA)</h2>
+                
+                <div class="exp-card">
+                    <h3 class="text-[10px] text-yellow-300">TECH LEAD @ BANCO INDUSTRIAL</h3>
+                    <p class="text-[8px] text-gray-400">AUG 2024 - PRESENT</p>
+                    <p class="text-[9px] mt-2" data-key="exp_bi">Liderazgo de equipos y análisis técnico de soluciones bancarias.</p>
+                </div>
+
+                <div class="exp-card">
+                    <h3 class="text-[10px] text-yellow-300">FULLSTACK DEV @ SSASA</h3>
+                    <p class="text-[8px] text-gray-400">AUG 2024 - JUN 2025</p>
+                    <p class="text-[9px] mt-2" data-key="exp_ssasa">Soporte y desarrollo de un motor de crédito para bancos.</p>
+                </div>
+            </section>
+
+            <section class="pixel-border p-6 bg-red-900/20">
+                <h2 class="section-title" data-key="skills_title">> ARSENAL (SKILLS)</h2>
+                <div class="mb-4">
+                    <h3 class="text-[10px] mb-2 text-purple-400">BACKEND:</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">PHP</span> <span class="skill-tag">LARAVEL</span>
+                        <span class="skill-tag">C#</span> <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">JAVA</span> <span class="skill-tag">RUBY ON RAILS</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-[10px] mb-2 text-blue-400">FRONTEND:</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JS</span> <span class="skill-tag">TAILWIND</span>
+                        <span class="skill-tag">VUE.JS</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+         <section class="pixel-border p-6 bg-green-900/20 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div>
+
+                <h2 class="section-title" data-key="EDUCATION">> EDUCATION</h2>
+
+                <p class="text-[10px]" data-key="education_degree">INGENIERÍA EN SISTEMAS</p>
+
+                <p class="text-[8px] text-gray-400">U. MARIANO GÁLVEZ (2022  - presente)</p>
+            </div>
+
+            <div>
+
+                <h2 class="section-title" data-key="LANGUAGES">> Lenguajes</h2>
+
+                <p class="text-[10px]" data-key="language_english">INGLÉS: C1 (CERTIFICADO)</p>
+
+                <p class="text-[10px]" data-key="language_spanish">ESPAÑOL: NATIVO</p>
+
+                <p class="text-[10px]" data-key="language_italian">ITALIANO: BÁSICO</p>
+            </div>
+
+        </section>
+
+
+        <footer class="text-center mt-10 pb-10">
+
+            <p class="text-[8px] mb-6" data-key="footer_msg">¿CONECTAMOS PARA UNA PARTIDA O UN PROYECTO?</p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <a href="mailto:olamarvin40@gmail.com" class="pixel-border p-2 bg-white text-black text-[10px]">EMAIL</a>
+
+                <a href="https://www.linkedin.com/in/marvinola" class="pixel-border p-2 bg-white text-black text-[10px]">LINKEDIN</a>
+
+            </div>
+
+            <p class="mt-8 text-[7px] text-gray-500">PLAYER: MARVIN OLA - GUATEMALA</p>
+
+        </footer>
+
+    <script>
+        const translations = {
+            es: {
+                title: "TECH LEAD / DESARROLLADOR DE SOFTWARE",
+                profile_title: "> QUEST LOG: PERFIL",
+                profile_desc: '"Creo que la mejor tecnología es construida por personas que entienden a las personas." Mi viaje comenzó en el mundo del servicio al cliente. Hoy lidero equipos y diseño arquitecturas robustas.',
+                exp_title: "> MODO CAMPAÑA (EXPERIENCIA)",
+                exp_bi: "Liderazgo de equipos y análisis técnico de soluciones bancarias de alto impacto.",
+                exp_ssasa: "Soporte y desarrollo de motores de crédito para bancos nacionales.",
+                skills_title: "> ARSENAL (HABILIDADES)",
+                footer_msg: "¿CONECTAMOS PARA UNA PARTIDA O UN PROYECTO?"
+            },
+            en: {
+                title: "TECH LEAD / SOFTWARE DEVELOPER",
+                profile_title: "> QUEST LOG: PROFILE",
+                profile_desc: '"I believe the best technology is built by people who understand people." My journey started in customer service. Today I lead teams and design robust software architectures.',
+                exp_title: "> CAMPAIGN MODE (EXPERIENCE)",
+                exp_bi: "Leading development teams and technical analysis for high-impact banking solutions.",
+                exp_ssasa: "Support and development of a credit engine for national banks.",
+                skills_title: "> ARSENAL (SKILLS)",
+                footer_msg: "CONNECT FOR A GAME OR A PROJECT?",
+                education: "EDUCATION",
+                LANGUAGES: "LANGUAGES",
+                education_degree: "BACHELOR'S IN SYSTEMS ENGINEERING",
+                language_english: "ENGLISH: C1 (CERTIFIED)",
+                language_spanish: "SPANISH: NATIVE",
+                language_italian: "ITALIAN: BASIC"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                el.innerText = translations[lang][key];
+            });
+        }
+    </script>
+</body>
+</html>
