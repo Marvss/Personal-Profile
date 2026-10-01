@@ -1,0 +1,10 @@
+{
+  "name": "marvin-ola-portfolio",
+  "private": true,
+  "type": "module",
+  "description": "Personal site of Marvin Ola — static, no build step.",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "check": "node scripts/check-i18n.mjs"
+  }
+}

@@ -1,0 +1,191 @@
+/* Reusable building blocks: pixel box, buttons, tags, eyebrow, icons, toast, language switch. */
+
+/* --- Pixel box: hard border + offset shadow, the core 8-bit surface --- */
+.pixel-box {
+  position: relative;
+  background: var(--bg-elev);
+  border: var(--border) solid var(--line-strong);
+  box-shadow: var(--drop) var(--drop) 0 0 var(--shadow);
+}
+
+/* --- Eyebrow / section headings --- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.eyebrow--blink::after {
+  content: '_';
+  animation: blink 1s steps(1) infinite;
+}
+
+.section-head {
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.section-title {
+  margin-top: 12px;
+  font-family: var(--font-pixel);
+  font-size: clamp(1.25rem, 0.9rem + 1.6vw, 2rem);
+  font-weight: 400;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 3px 3px 0 var(--shadow);
+}
+
+.section-intro {
+  max-width: 60ch;
+  margin-top: 16px;
+  color: var(--text-muted);
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: var(--border) solid var(--text);
+  background: transparent;
+  box-shadow: 4px 4px 0 0 var(--shadow);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 80ms steps(2),
+    box-shadow 80ms steps(2),
+    background-color 120ms;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--shadow);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 var(--shadow);
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn--ghost:hover {
+  background: var(--bg-elev-2);
+}
+
+/* --- Tags --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  padding: 4px 10px;
+  border: 2px solid var(--line-strong);
+  background: var(--bg-elev-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+/* --- Pixel icons (from the inline sprite) --- */
+.pixel-icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  shape-rendering: crispEdges;
+  flex-shrink: 0;
+}
+
+.btn .pixel-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.pixel-icon--yellow { color: var(--yellow); }
+.pixel-icon--green { color: var(--green); }
+.pixel-icon--cyan { color: var(--cyan); }
+.pixel-icon--pink { color: var(--pink); }
+
+/* --- Language switch (segmented EN | ES) --- */
+.lang-switch {
+  display: inline-flex;
+  border: 2px solid var(--line-strong);
+  background: var(--bg);
+  box-shadow: 3px 3px 0 0 var(--shadow);
+}
+
+.lang-switch__btn {
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-pixel);
+  font-size: 0.625rem;
+  color: var(--text-dim);
+  transition: color 120ms, background-color 120ms;
+}
+
+.lang-switch__btn + .lang-switch__btn {
+  border-left: 2px solid var(--line-strong);
+}
+
+.lang-switch__btn:hover {
+  color: var(--text);
+}
+
+.lang-switch__btn[aria-pressed='true'] {
+  background: var(--yellow);
+  color: #000;
+  cursor: default;
+}
+
+/* --- Toast (live region) --- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 150;
+  max-width: min(92vw, 440px);
+  padding: 12px 18px;
+  border: var(--border) solid var(--accent);
+  background: var(--bg-elev);
+  box-shadow: var(--drop) var(--drop) 0 0 var(--shadow);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 16px);
+  transition:
+    opacity 160ms steps(3),
+    transform 160ms steps(3);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* --- Animations --- */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
