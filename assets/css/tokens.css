@@ -1,0 +1,47 @@
+/* Design tokens — the only place colors, fonts and spacing are defined. */
+:root {
+  /* Surfaces */
+  --bg: #0a0c10;
+  --bg-elev: #11141b;
+  --bg-elev-2: #181c26;
+  --line: #262c3a;
+  --line-strong: #3a4256;
+  --shadow: #000;
+
+  /* Text */
+  --text: #e8ebf1;
+  --text-muted: #a3acbd;
+  --text-dim: #6f788b;
+
+  /* Phosphor palette */
+  --green: #3ddc84;
+  --yellow: #ffd23f;
+  --pink: #ff5c8a;
+  --cyan: #4cc9f0;
+  --purple: #a78bfa;
+  --orange: #ff9f43;
+  --accent: var(--green);
+  --on-accent: #06210f;
+
+  /* Type */
+  --font-pixel: 'Press Start 2P', ui-monospace, monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+
+  /* Pixel geometry */
+  --px: 4px;
+  --border: 3px;
+  --drop: 6px;
+
+  /* Layout */
+  --container: 1120px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --section-space: clamp(72px, 10vw, 128px);
+  --header-h: 68px;
+}

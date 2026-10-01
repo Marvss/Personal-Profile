@@ -1,164 +1,549 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvin Ola | Tech Lead 8-Bit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Press Start 2P', cursive; background-color: #000; color: #fff; line-height: 1.6; }
-        .pixel-border { border: 4px solid #fff; box-shadow: 6px 6px 0px #555; margin-bottom: 20px; }
-        .skill-tag { background: #333; padding: 5px; display: inline-block; margin: 2px; font-size: 8px; border: 1px solid #fff; }
-        .section-title { color: #00ff00; text-transform: uppercase; margin-bottom: 15px; font-size: 14px; }
-        .exp-card { border-left: 4px solid #ffff00; padding-left: 15px; margin-bottom: 20px; }
-        .lang-btn { cursor: pointer; transition: all 0.2s; }
-        .lang-btn:active { transform: translateY(4px); box-shadow: 2px 2px 0px #555; }
-    </style>
-</head>
-<body class="p-4 md:p-10">
-    <main class="max-w-4xl mx-auto">
-        
-        <div class="flex justify-end mb-6">
-            <button onclick="changeLanguage('es')" class="lang-btn pixel-border px-3 py-1 bg-red-600 text-[10px] mr-2">ES</button>
-            <button onclick="changeLanguage('en')" class="lang-btn pixel-border px-3 py-1 bg-blue-600 text-[10px]">EN</button>
-        </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marvin Ola — Technical Lead &amp; Full Stack Engineer</title>
+    <meta
+      name="description"
+      data-i18n-attr="content:meta.description"
+      content="Technical Lead and full stack engineer from Guatemala building secure, scalable systems for banking and fintech with Laravel, .NET, Node.js and AWS."
+    />
+    <meta name="author" content="Marvin Ola" />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta name="color-scheme" content="dark" />
 
-        <header class="text-center mb-12">
-            <div class="w-24 h-24 bg-blue-600 mx-auto mb-6 pixel-border flex items-center justify-center text-4xl">M</div>
-            <h1 class="text-xl md:text-3xl text-yellow-400 mb-2">MARVIN OLA</h1>
-            <p class="text-[10px] md:text-[12px] text-gray-400" data-key="title">TECH LEAD / SOFTWARE DEVELOPER</p>
-            <div class="mt-4 text-[8px] flex justify-center gap-4 text-green-400">
-                <span>LVL: 21</span>
-                <span>HP: 100/100</span>
-                <span>MP: ∞</span>
-            </div>
-        </header>
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Marvin Ola — Technical Lead & Full Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Technical Lead and full stack engineer building secure, scalable systems for banking and fintech."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_LA" />
+    <meta name="twitter:card" content="summary" />
 
-        <section class="pixel-border p-6 bg-gray-900">
-            <h2 class="section-title" data-key="profile_title">> QUEST LOG: PERFIL </h2>
-            <p class="text-[10px] md:text-[11px] leading-relaxed" data-key="profile_desc">
-                "I believe the best technology is built by people who understand people." [cite: 14] 
-                Mi viaje comenzó en servicio al cliente y hospitalidad[cite: 15]. 
-                Hoy diseño arquitecturas robustas y estrategias técnicas[cite: 59].
-            </p>
-        </section>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <section class="pixel-border p-6 bg-blue-900/20">
-                <h2 class="section-title" data-key="exp_title">> CAMPAIGN MODE (EXPERIENCIA)</h2>
-                
-                <div class="exp-card">
-                    <h3 class="text-[10px] text-yellow-300">TECH LEAD @ BANCO INDUSTRIAL</h3>
-                    <p class="text-[8px] text-gray-400">AUG 2024 - PRESENT</p>
-                    <p class="text-[9px] mt-2" data-key="exp_bi">Liderazgo de equipos y análisis técnico de soluciones bancarias.</p>
-                </div>
-
-                <div class="exp-card">
-                    <h3 class="text-[10px] text-yellow-300">FULLSTACK DEV @ SSASA</h3>
-                    <p class="text-[8px] text-gray-400">AUG 2024 - JUN 2025</p>
-                    <p class="text-[9px] mt-2" data-key="exp_ssasa">Soporte y desarrollo de un motor de crédito para bancos.</p>
-                </div>
-            </section>
-
-            <section class="pixel-border p-6 bg-red-900/20">
-                <h2 class="section-title" data-key="skills_title">> ARSENAL (SKILLS)</h2>
-                <div class="mb-4">
-                    <h3 class="text-[10px] mb-2 text-purple-400">BACKEND:</h3>
-                    <div class="flex flex-wrap">
-                        <span class="skill-tag">PHP</span> <span class="skill-tag">LARAVEL</span>
-                        <span class="skill-tag">C#</span> <span class="skill-tag">.NET</span>
-                        <span class="skill-tag">JAVA</span> <span class="skill-tag">RUBY ON RAILS</span>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <h3 class="text-[10px] mb-2 text-blue-400">FRONTEND:</h3>
-                    <div class="flex flex-wrap">
-                        <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JS</span> <span class="skill-tag">TAILWIND</span>
-                        <span class="skill-tag">VUE.JS</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-         <section class="pixel-border p-6 bg-green-900/20 grid grid-cols-1 md:grid-cols-2 gap-4">
-
-            <div>
-
-                <h2 class="section-title" data-key="EDUCATION">> EDUCATION</h2>
-
-                <p class="text-[10px]" data-key="education_degree">INGENIERÍA EN SISTEMAS</p>
-
-                <p class="text-[8px] text-gray-400">U. MARIANO GÁLVEZ (2022  - presente)</p>
-            </div>
-
-            <div>
-
-                <h2 class="section-title" data-key="LANGUAGES">> Lenguajes</h2>
-
-                <p class="text-[10px]" data-key="language_english">INGLÉS: C1 (CERTIFICADO)</p>
-
-                <p class="text-[10px]" data-key="language_spanish">ESPAÑOL: NATIVO</p>
-
-                <p class="text-[10px]" data-key="language_italian">ITALIANO: BÁSICO</p>
-            </div>
-
-        </section>
-
-
-        <footer class="text-center mt-10 pb-10">
-
-            <p class="text-[8px] mb-6" data-key="footer_msg">¿CONECTAMOS PARA UNA PARTIDA O UN PROYECTO?</p>
-
-            <div class="flex flex-wrap justify-center gap-4">
-
-                <a href="mailto:olamarvin40@gmail.com" class="pixel-border p-2 bg-white text-black text-[10px]">EMAIL</a>
-
-                <a href="https://www.linkedin.com/in/marvinola" class="pixel-border p-2 bg-white text-black text-[10px]">LINKEDIN</a>
-
-            </div>
-
-            <p class="mt-8 text-[7px] text-gray-500">PLAYER: MARVIN OLA - GUATEMALA</p>
-
-        </footer>
-
+    <!-- Resolve the locale before first paint so Spanish visitors don't see an English flash. -->
     <script>
-        const translations = {
-            es: {
-                title: "TECH LEAD / DESARROLLADOR DE SOFTWARE",
-                profile_title: "> QUEST LOG: PERFIL",
-                profile_desc: '"Creo que la mejor tecnología es construida por personas que entienden a las personas." Mi viaje comenzó en el mundo del servicio al cliente. Hoy lidero equipos y diseño arquitecturas robustas.',
-                exp_title: "> MODO CAMPAÑA (EXPERIENCIA)",
-                exp_bi: "Liderazgo de equipos y análisis técnico de soluciones bancarias de alto impacto.",
-                exp_ssasa: "Soporte y desarrollo de motores de crédito para bancos nacionales.",
-                skills_title: "> ARSENAL (HABILIDADES)",
-                footer_msg: "¿CONECTAMOS PARA UNA PARTIDA O UN PROYECTO?"
-            },
-            en: {
-                title: "TECH LEAD / SOFTWARE DEVELOPER",
-                profile_title: "> QUEST LOG: PROFILE",
-                profile_desc: '"I believe the best technology is built by people who understand people." My journey started in customer service. Today I lead teams and design robust software architectures.',
-                exp_title: "> CAMPAIGN MODE (EXPERIENCE)",
-                exp_bi: "Leading development teams and technical analysis for high-impact banking solutions.",
-                exp_ssasa: "Support and development of a credit engine for national banks.",
-                skills_title: "> ARSENAL (SKILLS)",
-                footer_msg: "CONNECT FOR A GAME OR A PROJECT?",
-                education: "EDUCATION",
-                LANGUAGES: "LANGUAGES",
-                education_degree: "BACHELOR'S IN SYSTEMS ENGINEERING",
-                language_english: "ENGLISH: C1 (CERTIFIED)",
-                language_spanish: "SPANISH: NATIVE",
-                language_italian: "ITALIAN: BASIC"
-            }
-        };
-
-        function changeLanguage(lang) {
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                el.innerText = translations[lang][key];
-            });
-        }
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        try {
+          var pick =
+            new URLSearchParams(location.search).get('lang') ||
+            localStorage.getItem('mo.lang') ||
+            (navigator.languages && navigator.languages[0]) ||
+            navigator.language ||
+            '';
+          if (pick.toLowerCase().indexOf('es') === 0) {
+            root.classList.add('i18n-pending');
+            setTimeout(function () {
+              root.classList.remove('i18n-pending');
+            }, 1500);
+          }
+        } catch (e) {}
+      })();
     </script>
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap"
+    />
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+
+    <script type="module" src="assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marvin Ola",
+        "jobTitle": "Technical Lead & Full Stack Engineer",
+        "email": "mailto:olamarvin40@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Villa Nueva", "addressCountry": "GT" },
+        "sameAs": ["https://www.linkedin.com/in/marvinola", "https://github.com/Marvss"],
+        "knowsLanguage": ["es", "en", "ja"],
+        "knowsAbout": ["PHP", "Laravel", "C#", ".NET", "Node.js", "AWS", "Microservices", "Application Security"]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Pixel-art icon sprite (8×8 grid, referenced with <use>) -->
+    <svg width="0" height="0" class="visually-hidden" aria-hidden="true" focusable="false">
+      <symbol id="icon-trophy" viewBox="0 0 8 8">
+        <path d="M0 0h8v1h-8zM0 1h1v1h-1zM2 1h4v1h-4zM7 1h1v1h-1zM0 2h1v1h-1zM2 2h4v1h-4zM7 2h1v1h-1zM1 3h6v1h-6zM2 4h4v1h-4zM3 5h2v1h-2zM2 6h4v1h-4zM1 7h6v1h-6z" />
+      </symbol>
+      <symbol id="icon-coin" viewBox="0 0 8 8">
+        <path d="M2 0h4v1h-4zM1 1h2v1h-2zM5 1h2v1h-2zM0 2h2v1h-2zM3 2h2v1h-2zM6 2h2v1h-2zM0 3h2v1h-2zM3 3h2v1h-2zM6 3h2v1h-2zM0 4h2v1h-2zM3 4h2v1h-2zM6 4h2v1h-2zM0 5h2v1h-2zM3 5h2v1h-2zM6 5h2v1h-2zM1 6h2v1h-2zM5 6h2v1h-2zM2 7h4v1h-4z" />
+      </symbol>
+      <symbol id="icon-chip" viewBox="-0.5 0 8 8">
+        <path d="M1 0h1v1h-1zM3 0h1v1h-1zM5 0h1v1h-1zM0 1h7v1h-7zM1 2h1v1h-1zM5 2h1v1h-1zM0 3h2v1h-2zM3 3h1v1h-1zM5 3h2v1h-2zM1 4h1v1h-1zM5 4h1v1h-1zM0 5h7v1h-7zM1 6h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1z" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 8 8">
+        <path d="M0 0h8v1h-8zM0 1h1v1h-1zM7 1h1v1h-1zM0 2h1v1h-1zM2 2h4v1h-4zM7 2h1v1h-1zM0 3h1v1h-1zM2 3h4v1h-4zM7 3h1v1h-1zM0 4h1v1h-1zM2 4h4v1h-4zM7 4h1v1h-1zM1 5h1v1h-1zM3 5h2v1h-2zM6 5h1v1h-1zM2 6h1v1h-1zM5 6h1v1h-1zM3 7h2v1h-2z" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 8 8">
+        <path d="M3 0h2v1h-2zM3 1h2v1h-2zM0 2h8v1h-8zM1 3h6v1h-6zM2 4h4v1h-4zM1 5h6v1h-6zM1 6h2v1h-2zM5 6h2v1h-2zM0 7h1v1h-1zM7 7h1v1h-1z" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="-0.5 0 8 8">
+        <path d="M1 0h2v1h-2zM4 0h2v1h-2zM0 1h7v1h-7zM0 2h7v1h-7zM0 3h7v1h-7zM1 4h5v1h-5zM2 5h3v1h-3zM3 6h1v1h-1z" />
+      </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="#top" data-i18n-attr="aria-label:a11y.home" aria-label="Marvin Ola — back to top">
+          <span class="brand__mark" aria-hidden="true">MO</span>
+          <span class="brand__cursor" aria-hidden="true">_</span>
+        </a>
+
+        <nav class="site-nav" data-i18n-attr="aria-label:a11y.nav" aria-label="Primary">
+          <ul id="site-menu" class="site-nav__list">
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <div
+            class="lang-switch"
+            role="group"
+            data-i18n-attr="aria-label:a11y.language"
+            aria-label="Choose language"
+          >
+            <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="true" lang="en">EN</button>
+            <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false" lang="es">ES</button>
+          </div>
+
+          <button
+            type="button"
+            class="menu-toggle"
+            data-menu-toggle
+            aria-controls="site-menu"
+            aria-expanded="false"
+            data-i18n-attr="aria-label:a11y.menu"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="menu-toggle__bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__intro">
+            <p class="eyebrow eyebrow--blink"><span aria-hidden="true">&gt; </span><span data-i18n="hero.eyebrow">PLAYER 1 READY</span></p>
+            <h1 class="hero__title" id="hero-title">Marvin<br />Ola</h1>
+            <p class="hero__role" data-i18n="hero.role">Technical Lead · Full Stack Engineer</p>
+            <p class="hero__lede" data-i18n="hero.lede">
+              I lead teams and design secure, scalable systems for Guatemala's banking sector — from Laravel and .NET
+              services to event-driven architectures on AWS, with AI coding agents built into the workflow.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">
+                <span aria-hidden="true">▶</span> <span data-i18n="hero.cta.contact">Let's talk</span>
+              </a>
+              <a class="btn btn--ghost" href="#experience" data-i18n="hero.cta.experience">View experience</a>
+            </div>
+            <ul class="hero__social" data-i18n-attr="aria-label:a11y.social" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/marvinola" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+              <li><a href="https://github.com/Marvss" target="_blank" rel="noopener">GitHub ↗</a></li>
+              <li><a href="mailto:olamarvin40@gmail.com">olamarvin40@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <aside class="sheet pixel-box" aria-labelledby="sheet-title">
+            <header class="sheet__head">
+              <h2 class="sheet__title" id="sheet-title" data-i18n="sheet.title">CHARACTER SHEET</h2>
+              <span class="sheet__badge" aria-hidden="true">P1</span>
+            </header>
+            <dl class="sheet__stats">
+              <div><dt data-i18n="sheet.class">Class</dt><dd data-i18n="sheet.class.value">Tech Lead / Full Stack</dd></div>
+              <div><dt data-i18n="sheet.guild">Guild</dt><dd data-i18n="sheet.guild.value">Banking &amp; Fintech</dd></div>
+              <div><dt data-i18n="sheet.xp">XP</dt><dd data-i18n="sheet.xp.value">3+ years in production</dd></div>
+              <div><dt data-i18n="sheet.main">Main</dt><dd>PHP · C# · TypeScript</dd></div>
+              <div><dt data-i18n="sheet.special">Special</dt><dd data-i18n="sheet.special.value">Architecture · Code review · AI agents</dd></div>
+              <div><dt data-i18n="sheet.base">Base</dt><dd>Guatemala · GMT-6</dd></div>
+              <div><dt data-i18n="sheet.lang">Languages</dt><dd data-i18n="sheet.lang.value">ES native · EN C1</dd></div>
+            </dl>
+            <div class="sheet__hp" aria-hidden="true">
+              <span>HP</span>
+              <span class="sheet__hp-bar"><span></span></span>
+              <span>100/100</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section class="achievements" aria-labelledby="achievements-title">
+        <div class="container">
+          <h2 class="eyebrow" id="achievements-title" data-i18n="achievements.eyebrow">ACHIEVEMENTS UNLOCKED</h2>
+          <ul class="achievements__grid">
+            <li class="achievement pixel-box" data-reveal>
+              <svg class="pixel-icon pixel-icon--yellow" aria-hidden="true"><use href="#icon-trophy" /></svg>
+              <h3 data-i18n="achievements.1.title">Tech Lead at the #1 bank</h3>
+              <p data-i18n="achievements.1.text">
+                Led development teams and owned architecture for critical services at Banco Industrial, Guatemala's
+                largest bank.
+              </p>
+            </li>
+            <li class="achievement pixel-box" data-reveal>
+              <svg class="pixel-icon pixel-icon--green" aria-hidden="true"><use href="#icon-coin" /></svg>
+              <h3 data-i18n="achievements.2.title">A platform most banks run on</h3>
+              <p data-i18n="achievements.2.text">
+                Built and evolved PRECREDIT, the credit management platform used by most of Guatemala's banks.
+              </p>
+            </li>
+            <li class="achievement pixel-box" data-reveal>
+              <svg class="pixel-icon pixel-icon--cyan" aria-hidden="true"><use href="#icon-chip" /></svg>
+              <h3 data-i18n="achievements.3.title">AI in the delivery loop</h3>
+              <p data-i18n="achievements.3.text">
+                Introduced AI coding agents and LLM APIs (Copilot, OpenAI, Anthropic) to speed up the team's delivery.
+              </p>
+            </li>
+            <li class="achievement pixel-box" data-reveal>
+              <svg class="pixel-icon pixel-icon--pink" aria-hidden="true"><use href="#icon-shield" /></svg>
+              <h3 data-i18n="achievements.4.title">Secure by design</h3>
+              <p data-i18n="achievements.4.text">
+                OWASP Top 10 enforced through code review, backed by an ongoing degree in Cybersecurity.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="about.eyebrow">// QUEST LOG</p>
+            <h2 class="section-title" id="about-title" data-i18n="about.title">About me</h2>
+          </header>
+          <div class="about__body" data-reveal>
+            <p data-i18n="about.p1">
+              I'm a Technical Lead and backend-focused full stack engineer with 3+ years of experience in Guatemala's
+              financial and banking sector. I've led development teams, owned architecture and code review for
+              high-volume transactional services, and turned business and compliance requirements into technical designs
+              that hold up in production.
+            </p>
+            <p data-i18n="about.p2">
+              My path started in customer service and hospitality, then bilingual technical support. That taught me
+              something I still apply every day: technology only works when it is built around the people who use it.
+            </p>
+            <blockquote class="quote" data-i18n="about.quote">
+              “I believe the best technology is built by people who understand people.”
+            </blockquote>
+          </div>
+          <aside class="about__passives pixel-box" data-reveal aria-labelledby="passives-title">
+            <h3 class="eyebrow" id="passives-title" data-i18n="about.passives">PASSIVE SKILLS</h3>
+            <ul class="passives">
+              <li data-i18n="about.passive.1">Team leadership</li>
+              <li data-i18n="about.passive.2">Problem solving</li>
+              <li data-i18n="about.passive.3">Performance under pressure</li>
+              <li data-i18n="about.passive.4">Self-directed learning</li>
+              <li data-i18n="about.passive.5">Cross-functional collaboration</li>
+              <li data-i18n="about.passive.6">Client communication</li>
+              <li data-i18n="about.passive.7">Analytical thinking</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="exp.eyebrow">// STAGE SELECT</p>
+            <h2 class="section-title" id="experience-title" data-i18n="exp.title">Experience</h2>
+          </header>
+
+          <ol class="timeline">
+            <li class="stage stage--current" data-reveal>
+              <p class="stage__marker" aria-hidden="true"><span data-i18n="exp.stage">STAGE</span> 05</p>
+              <article class="stage__card pixel-box">
+                <header class="stage__head">
+                  <div>
+                    <h3 class="stage__role" data-i18n="exp.bi.role">Technical Lead</h3>
+                    <p class="stage__company">Banco Industrial <span>· Guatemala</span></p>
+                  </div>
+                  <p class="stage__date">
+                    <span class="stage__flag" data-i18n="exp.current">LATEST</span>
+                    <span data-i18n="exp.bi.date">May 2025 – Jul 2026</span>
+                  </p>
+                </header>
+                <ul class="stage__list">
+                  <li data-i18n="exp.bi.1">Led and coordinated development teams, translating business and compliance requirements into technical designs for high-impact banking operations.</li>
+                  <li data-i18n="exp.bi.2">Designed scalable service architectures — microservices, event-driven, AWS (EC2, Lambda, RDS, S3, API Gateway) — for high-volume transactional systems.</li>
+                  <li data-i18n="exp.bi.3">Owned code review across the team's services, enforcing standards for quality, scalability and secure development (OWASP Top 10).</li>
+                  <li data-i18n="exp.bi.4">Introduced AI coding agents and LLM APIs (GitHub Copilot, OpenAI, Anthropic) into the development workflow to accelerate delivery.</li>
+                </ul>
+                <ul class="tags" aria-label="Stack">
+                  <li>AWS</li><li>Microservices</li><li>Event-driven</li><li>Code review</li><li>OWASP</li><li>AI agents</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="stage" data-reveal>
+              <p class="stage__marker" aria-hidden="true"><span data-i18n="exp.stage">STAGE</span> 04</p>
+              <article class="stage__card pixel-box">
+                <header class="stage__head">
+                  <div>
+                    <h3 class="stage__role" data-i18n="exp.ssasa.role">Full Stack Developer</h3>
+                    <p class="stage__company">SSASA <span>· Guatemala</span></p>
+                  </div>
+                  <p class="stage__date" data-i18n="exp.ssasa.date">Aug 2024 – Jun 2025</p>
+                </header>
+                <ul class="stage__list">
+                  <li data-i18n="exp.ssasa.1">Developed and maintained PRECREDIT, a credit management platform used by most banks in Guatemala.</li>
+                  <li data-i18n="exp.ssasa.2">Built backend features and REST APIs with PHP/Laravel, Node.js and MySQL, reducing turnaround time in credit analysis workflows.</li>
+                  <li data-i18n="exp.ssasa.3">Worked directly with partner banks on support, integrations and new features, including secure API authentication (JWT/OAuth2).</li>
+                </ul>
+                <ul class="tags" aria-label="Stack">
+                  <li>PHP</li><li>Laravel</li><li>Node.js</li><li>MySQL</li><li>REST</li><li>JWT / OAuth2</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="stage" data-reveal>
+              <p class="stage__marker" aria-hidden="true"><span data-i18n="exp.stage">STAGE</span> 03</p>
+              <article class="stage__card pixel-box">
+                <header class="stage__head">
+                  <div>
+                    <h3 class="stage__role" data-i18n="exp.sisnova.role">Backend Developer</h3>
+                    <p class="stage__company">SISNOVA S.A. <span>· Guatemala</span></p>
+                  </div>
+                  <p class="stage__date" data-i18n="exp.sisnova.date">Jan 2024 – Jun 2024</p>
+                </header>
+                <ul class="stage__list">
+                  <li data-i18n="exp.sisnova.1">Designed and built microservices for accounting and point-of-sale systems using C#, .NET and GraphQL.</li>
+                  <li data-i18n="exp.sisnova.2">Developed GraphQL, REST and SOAP APIs integrating accounting platforms with third-party systems, deployed to the cloud within an Agile/Scrum team.</li>
+                </ul>
+                <ul class="tags" aria-label="Stack">
+                  <li>C#</li><li>.NET</li><li>GraphQL</li><li>REST</li><li>SOAP</li><li>Scrum</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="stage" data-reveal>
+              <p class="stage__marker" aria-hidden="true"><span data-i18n="exp.stage">STAGE</span> 02</p>
+              <article class="stage__card pixel-box">
+                <header class="stage__head">
+                  <div>
+                    <h3 class="stage__role" data-i18n="exp.knd.role">Junior Developer (Internship)</h3>
+                    <p class="stage__company">KND Code <span>· Guatemala</span></p>
+                  </div>
+                  <p class="stage__date" data-i18n="exp.knd.date">Sep 2023 – Nov 2023</p>
+                </header>
+                <ul class="stage__list">
+                  <li data-i18n="exp.knd.1">Built modules for an HR management system with C#, SQL Server and MVC, and refactored queries and stored procedures to improve performance.</li>
+                </ul>
+                <ul class="tags" aria-label="Stack">
+                  <li>C#</li><li>SQL Server</li><li>MVC</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="stage" data-reveal>
+              <p class="stage__marker" aria-hidden="true"><span data-i18n="exp.stage">STAGE</span> 01</p>
+              <article class="stage__card pixel-box">
+                <header class="stage__head">
+                  <div>
+                    <h3 class="stage__role" data-i18n="exp.telus.role">Technical Support Specialist</h3>
+                    <p class="stage__company">Telus S.A. <span>· Guatemala</span></p>
+                  </div>
+                  <p class="stage__date" data-i18n="exp.telus.date">Dec 2022 – Jul 2023</p>
+                </header>
+                <ul class="stage__list">
+                  <li data-i18n="exp.telus.1">Provided bilingual (English/Spanish) network support to customers in Canada, configuring and troubleshooting routers, switches and end-user equipment.</li>
+                </ul>
+                <ul class="tags" aria-label="Stack">
+                  <li>Networking</li><li>EN / ES</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="skills.eyebrow">// INVENTORY</p>
+            <h2 class="section-title" id="skills-title" data-i18n="skills.title">Skills</h2>
+            <p class="section-intro" data-i18n="skills.intro">
+              The tools I reach for to ship reliable software — no made-up percentage bars.
+            </p>
+          </header>
+
+          <div class="inventory">
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--yellow)">
+              <h3 class="slot__title" data-i18n="skills.cat.languages">Languages</h3>
+              <ul class="tags">
+                <li>PHP</li><li>C#</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>Java</li><li>Python</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--green)">
+              <h3 class="slot__title" data-i18n="skills.cat.backend">Backend</h3>
+              <ul class="tags">
+                <li>Laravel</li><li>.NET / ASP.NET Core</li><li>Node.js</li><li>Entity Framework</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--cyan)">
+              <h3 class="slot__title" data-i18n="skills.cat.frontend">Frontend</h3>
+              <ul class="tags">
+                <li>Vue.js</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>jQuery</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--orange)">
+              <h3 class="slot__title" data-i18n="skills.cat.cloud">Cloud &amp; DevOps</h3>
+              <ul class="tags">
+                <li>AWS EC2</li><li>Lambda</li><li>RDS</li><li>S3</li><li>API Gateway</li><li>Docker</li><li>GitHub Actions</li><li>CI/CD</li><li>Git</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--purple)">
+              <h3 class="slot__title" data-i18n="skills.cat.data">Databases</h3>
+              <ul class="tags">
+                <li>MySQL</li><li>MariaDB</li><li>SQL Server</li><li>MongoDB</li>
+                <li data-i18n="skills.item.modeling">Data modeling</li><li data-i18n="skills.item.queries">Query optimization</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--green)">
+              <h3 class="slot__title" data-i18n="skills.cat.architecture">Architecture &amp; APIs</h3>
+              <ul class="tags">
+                <li data-i18n="skills.item.microservices">Microservices</li><li data-i18n="skills.item.eventDriven">Event-driven</li>
+                <li>Clean Architecture</li><li>DDD</li><li>REST</li><li>GraphQL</li><li>SOAP</li><li>WebSockets</li><li>OpenAPI</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--pink)">
+              <h3 class="slot__title" data-i18n="skills.cat.security">Security</h3>
+              <ul class="tags">
+                <li>OWASP Top 10</li><li data-i18n="skills.item.secureCoding">Secure coding</li><li>OAuth2 / JWT</li>
+                <li data-i18n="skills.item.apiSecurity">API security</li><li>TLS</li>
+              </ul>
+            </article>
+            <article class="slot pixel-box" data-reveal style="--slot-color: var(--cyan)">
+              <h3 class="slot__title" data-i18n="skills.cat.ai">AI</h3>
+              <ul class="tags">
+                <li>OpenAI API</li><li>Anthropic API</li><li>RAG</li>
+                <li data-i18n="skills.item.prompting">Prompt engineering</li><li data-i18n="skills.item.agents">AI coding agents</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & LANGUAGES -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="edu.eyebrow">// TRAINING GROUNDS</p>
+            <h2 class="section-title" id="education-title" data-i18n="edu.title">Education &amp; languages</h2>
+          </header>
+
+          <div class="edu">
+            <ul class="edu__list">
+              <li class="degree pixel-box" data-reveal>
+                <p class="degree__meta">
+                  <span data-i18n="edu.unir.date">2026 – Present</span>
+                  <span class="stage__flag" data-i18n="edu.inProgress">IN PROGRESS</span>
+                </p>
+                <h3 class="degree__title" data-i18n="edu.unir.degree">Bachelor's Degree in Cybersecurity</h3>
+                <p class="degree__school">Universidad Internacional de La Rioja (UNIR)</p>
+              </li>
+              <li class="degree pixel-box" data-reveal>
+                <p class="degree__meta">
+                  <span data-i18n="edu.umg.date">2022 – Present</span>
+                  <span class="stage__flag" data-i18n="edu.inProgress">IN PROGRESS</span>
+                </p>
+                <h3 class="degree__title" data-i18n="edu.umg.degree">B.S. in Systems Engineering and Computer Science</h3>
+                <p class="degree__school">Universidad Mariano Gálvez de Guatemala</p>
+              </li>
+            </ul>
+
+            <aside class="langs pixel-box" data-reveal aria-labelledby="langs-title">
+              <h3 class="eyebrow" id="langs-title" data-i18n="edu.languages">SPOKEN LANGUAGES</h3>
+              <ul class="langs__list">
+                <li class="lang">
+                  <span class="lang__name" data-i18n="edu.lang.es">Spanish</span>
+                  <span class="lang__level" data-i18n="edu.lang.es.level">Native</span>
+                  <span class="pips" style="--filled: 6" aria-hidden="true"></span>
+                </li>
+                <li class="lang">
+                  <span class="lang__name" data-i18n="edu.lang.en">English</span>
+                  <span class="lang__level" data-i18n="edu.lang.en.level">C1 · Certified</span>
+                  <span class="pips" style="--filled: 5" aria-hidden="true"></span>
+                </li>
+                <li class="lang">
+                  <span class="lang__name" data-i18n="edu.lang.ja">Japanese</span>
+                  <span class="lang__level" data-i18n="edu.lang.ja.level">A1 · Beginner</span>
+                  <span class="pips" style="--filled: 1" aria-hidden="true"></span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact__card pixel-box" data-reveal>
+            <p class="eyebrow" data-i18n="contact.eyebrow">// CONTINUE?</p>
+            <h2 class="section-title" id="contact-title" data-i18n="contact.title">Let's build something solid</h2>
+            <p class="contact__text" data-i18n="contact.text">
+              Looking for a technical lead, a backend engineer who understands banking, or someone to untangle a hard
+              problem? My inbox is open.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="mailto:olamarvin40@gmail.com">
+                <svg class="pixel-icon" aria-hidden="true"><use href="#icon-heart" /></svg>
+                <span data-i18n="contact.email">Send an email</span>
+              </a>
+              <button class="btn btn--ghost" type="button" data-copy="olamarvin40@gmail.com" data-i18n="contact.copy">
+                Copy email
+              </button>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/marvinola" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="btn btn--ghost" href="https://github.com/Marvss" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+            <p class="contact__location" data-i18n="contact.location">Based in Guatemala City area · GMT-6</p>
+            <p class="contact__coin" aria-hidden="true">
+              <svg class="pixel-icon pixel-icon--yellow"><use href="#icon-coin" /></svg>
+              <span data-i18n="contact.coin">INSERT COIN TO CONTINUE</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>© <span data-year>2026</span> Marvin Ola</p>
+        <p data-i18n="footer.built">
+          Hand-built with semantic HTML, modern CSS and vanilla JavaScript. No frameworks, no trackers.
+        </p>
+        <p class="site-footer__hint" data-i18n="footer.hint">Psst… try the Konami code.</p>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
